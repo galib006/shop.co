@@ -8,33 +8,43 @@
     <title>Shop.co</title>
 </head>
 <body>
-    <header>
-        <div class="head-content grid grid-cols-4 mx-40">
-            <div class="logo">
-                <h1 class="font-bold text-3xl md:text-5xl lg:text-6xl"><a href="#">SHOP.CO</a></h1>
-            </div>
-            <div class="menu hidden xl:block">
-                <nav>
-                    <ul class="flex">
-                        <li><a href="#">SHOP <span><i class="fa-solid fa-angle-down"></i></span></a></li>
-                        <li><a href="#">On Sale</a></li>
-                        <li><a href="#">New Arrivals</a></li>
-                        <li><a href="#">Brands</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="header-search flex">
-                <p><span><i class="fa-solid fa-magnifying-glass"></i></span></p>
-                <input type="text"class="w-full hidden xl:block" placeholder="Searchh for products...">
-            </div>
-            <div class="header-right ">
-                <ul class="flex justify-center">
-                    <li><a href="#"><span><i class="fa-solid fa-cart-shopping"></i></span></a></li>
-                    <li><a href="#"><span><i class="fa-solid fa-circle-user"></i></span></a></li>
-                </ul>
-            </div>
-        </div>
-    </header>
+<header class="py-4">
+  <div class="head-content mx-4 lg:mx-40 flex justify-start justify-between flex-wrap lg:grid lg:grid-cols-4 lg:items-center">
+
+    <!-- Left: Menu icon -->
+    <div class="menu order-1 lg:order-2">
+      <a href="#" class="block xl:hidden text-xl"><i class="fa-solid fa-bars"></i></a>
+      <nav class="hidden xl:block">
+        <ul class="flex gap-4">
+          <li><a href="#">SHOP <i class="fa-solid fa-angle-down"></i></a></li>
+          <li><a href="#">On Sale</a></li>
+          <li><a href="#">New Arrivals</a></li>
+          <li><a href="#">Brands</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Middle: Logo -->
+    <div class="logo order-2 lg:order-1 flex-1 text-center lg:text-left">
+      <h1 class="font-bold text-3xl md:text-5xl lg:text-6xl"><a href="#">SHOP.CO</a></h1>
+    </div>
+
+    <!-- Right: Cart & User icon -->
+    <div class="header-right order-3 flex gap-4 lg:justify-end">
+      <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+      <a href="#"><i class="fa-solid fa-circle-user"></i></a>
+    </div>
+
+    <!-- Search bar (only visible in medium and up) -->
+    <div class="header-search order-4 w-full hidden md:flex justify-end lg:order-3 lg:col-span-1 mt-4 lg:mt-0">
+      <i class="fa-solid fa-magnifying-glass mr-2"></i>
+      <input type="text" class="w-full max-w-md" placeholder="Search for products...">
+    </div>
+
+  </div>
+</header>
+
+    
     
 </body>
 </html>
